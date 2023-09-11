@@ -1,11 +1,13 @@
-import Image from 'next/image'
+import NavBar from "@/components/NavBar"
 
 export default function Home() {
   return (
-    <main className="">
+    <>
+    <NavBar />
+    <main>
       <div className="text-2xl">
-     <h1>Hello!</h1>
+        <h1>Hello!</h1>
       </div>
-    </main>
+    </main></>
   )
 }

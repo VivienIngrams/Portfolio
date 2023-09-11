@@ -1,9 +1,9 @@
+'use client'
+
 import './globals.css'
-import { Inter } from 'next/font/google'
 
-import NavBar from '@/components/Navbar'
-
-const inter = Inter({ subsets: ['latin'] })
+import NavBar from '@/components/NavBar'
+import { ThemeProvider } from 'next-themes'
 
 export const metadata = {
   title: 'Vivien Ingrams Portfolio',
@@ -13,9 +13,12 @@ export const metadata = {
 export default function RootLayout({ children }) {
   return (
     <html lang="en">
-      <body className={inter.className}>
+      <body>
+        <ThemeProvider enableSystem={true} attribute="class">
         <NavBar />
-        {children}</body>
+        {children}
+        </ThemeProvider>
+        </body>
     </html>
   )
 }
